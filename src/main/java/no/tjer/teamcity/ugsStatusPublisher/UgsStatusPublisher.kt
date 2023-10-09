@@ -146,7 +146,9 @@ internal class UgsStatusPublisher(
     }
 
     companion object {
-        private const val METRICS_URL_FORMAT = "{0}/api/rugs_metrics"
+        // @ZhymonNorman - Remove metrics URL
+        // private const val METRICS_URL_FORMAT = "{0}/api/rugs_metrics"
+        private const val METRICS_URL_FORMAT = "{0}/api/build/latest"
         private const val POST_BADGE_URL_FORMAT = "{0}/api/build"
         private const val ERROR_AUTHORIZATION = "Check username & password for RUGS"
         private const val FAILED_TO_TEST_CONNECTION_TO_REPOSITORY =
