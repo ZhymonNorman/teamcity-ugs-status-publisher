@@ -149,7 +149,7 @@ internal class UgsStatusPublisher(
         // @ZhymonNorman - Remove metrics URL
         // private const val METRICS_URL_FORMAT = "{0}/api/rugs_metrics"
         private const val METRICS_URL_FORMAT = "{0}/api/latest"
-        private const val POST_BADGE_URL_FORMAT = "{0}/api/build"
+        private const val POST_BADGE_URL_FORMAT = "{0}/api/Build"
         private const val ERROR_AUTHORIZATION = "Check username & password for RUGS"
         private const val FAILED_TO_TEST_CONNECTION_TO_REPOSITORY =
             "UGS publisher has failed to test connection to server "
