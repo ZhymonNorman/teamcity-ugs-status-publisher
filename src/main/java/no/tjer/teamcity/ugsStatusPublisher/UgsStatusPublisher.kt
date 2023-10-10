@@ -109,6 +109,8 @@ internal class UgsStatusPublisher(
         body.put("Project", myParams[UgsConstants.PROJECT])
         body.put("BuildType", myParams[UgsConstants.BADGE_NAME])
         body.put("Result", status.result.uGSValue)
+        // @ZhymonNorman - add empty archive path for support for py-ugs-server
+        body.put("ArchivePath", "")
         body.put("Url", status.targetUrl)
         postJson(
             commitStatusUrl,
@@ -149,6 +151,8 @@ internal class UgsStatusPublisher(
         // @ZhymonNorman - Remove metrics URL
         // private const val METRICS_URL_FORMAT = "{0}/api/rugs_metrics"
         private const val METRICS_URL_FORMAT = "{0}/api/latest"
+        // @ZhymonNorman - Change POST_BADGE_URL_FORMAT to match py-ugs-server
+        // private const val POST_BADGE_URL_FORMAT = "{0}/api/build"
         private const val POST_BADGE_URL_FORMAT = "{0}/api/Build"
         private const val ERROR_AUTHORIZATION = "Check username & password for RUGS"
         private const val FAILED_TO_TEST_CONNECTION_TO_REPOSITORY =
