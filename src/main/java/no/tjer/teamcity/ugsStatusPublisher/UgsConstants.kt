@@ -45,5 +45,5 @@ class UgsConstants {
     fun getBadgeName() = BADGE_NAME
 
     @Suppress("unused")
-    fun getRevisionNum() = REV_NUM
+    fun getRevisionNumber() = REV_NUM
 }
