@@ -25,6 +25,7 @@ class UgsConstants {
         const val AUTH_PASSWORD = Constants.SECURE_PROPERTY_PREFIX + "ugsAuthPassword"
         const val PROJECT = "ugsProject"
         const val BADGE_NAME = "ugsBadgeName"
+        const val REV_NUM = "ugsRevisionNumber"
     }
 
     // Accessors for ugsSettings.jsp
@@ -42,4 +43,7 @@ class UgsConstants {
 
     @Suppress("unused")
     fun getBadgeName() = BADGE_NAME
+
+    @Suppress("unused")
+    fun getRevisionNum() = REV_NUM
 }

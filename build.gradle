@@ -33,11 +33,11 @@ teamcity {
             name = project.name
             displayName = "Unreal Game Sync Status Publisher"
             version = project.version
-            vendorName = 'Jørgen Tjernø'
-            vendorUrl = 'https://github.com/jorgenpt/teamcity-ugs-status-publisher'
-            description = 'Publish build status to Unreal Game Sync (UGS)'
-            downloadUrl = 'https://github.com/jorgenpt/teamcity-ugs-status-publisher/releases/latest/'
-            email = 'jorgen@tjer.no'
+            vendorName = 'Simon Norman'
+            vendorUrl = 'https://github.com/ZhymonNorman/teamcity-ugs-status-publisher'
+            description = 'Publish build status to Unreal Game Sync (UGS). Forked from Jørgen Tjernø'
+            downloadUrl = 'https://github.com/ZhymonNorman/teamcity-ugs-status-publisher/releases/latest/'
+            email = ''
             useSeparateClassloader = true
             allowRuntimeReload = true
 
