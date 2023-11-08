@@ -47,14 +47,6 @@
   </td>
 </tr>
 
-<tr>
-  <th><label for="${keys.revisionNumber}">Revision Number:<l:star/></label></th>
-  <td>
-    <props:textProperty name="${keys.revisionNumber}" className="mediumField"/>
-    <span class="error" id="error_${keys.revisionNumber}"></span>
-  </td>
-</tr>
-
 <c:if test="${testConnectionSupported}">
   <script>
     $j(document).ready(function () {

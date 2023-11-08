@@ -58,17 +58,6 @@ internal class UgsStatusPublisher(
         return UgsConstants.ID
     }
 
-    fun getRevision(revisionInfo:BuildRevision): Int? {
-
-        if(myParams[UgsConstants.REV_NUM] != null){
-            return myParams[UgsConstants.REV_NUM]?.toInt(10)
-        }
-        else {
-            return revisionInfo.revision.toInt(10)
-        }
-
-    }
-
     override fun isPublishingForRevision(revision: BuildRevision): Boolean {
         return true
     }
@@ -118,9 +107,7 @@ internal class UgsStatusPublisher(
         val revNum: Int? = getRevision(revision)
         // TODO: Try parse?
         
-        // @ZhymonNorman - parameterize revision
-        // body.put("ChangeNumber", revision.revision.toInt(10))
-        body.put("ChangeNumber", revNum)
+        body.put("ChangeNumber", revision.revision.toInt(10))
         body.put("Project", myParams[UgsConstants.PROJECT])
         body.put("BuildType", myParams[UgsConstants.BADGE_NAME])
         body.put("Result", status.result.uGSValue)
