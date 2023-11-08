@@ -104,9 +104,8 @@ internal class UgsStatusPublisher(
         val description = LogUtil.describe(build)
         val commitStatusUrl = MessageFormat.format(POST_BADGE_URL_FORMAT, myParams[UgsConstants.SERVER_URL])
         val body = JSONObject()
-        val revNum: Int? = getRevision(revision)
+
         // TODO: Try parse?
-        
         body.put("ChangeNumber", revision.revision.toInt(10))
         body.put("Project", myParams[UgsConstants.PROJECT])
         body.put("BuildType", myParams[UgsConstants.BADGE_NAME])
