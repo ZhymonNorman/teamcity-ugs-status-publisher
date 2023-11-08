@@ -48,10 +48,10 @@
 </tr>
 
 <tr>
-  <th><label for="${keys.ugsRevisionNumber}">Revision Number:<l:star/></label></th>
+  <th><label for="${keys.revisionNumber}">Revision Number:<l:star/></label></th>
   <td>
-    <props:textProperty name="${keys.ugsRevisionNumber}" className="mediumField"/>
-    <span class="error" id="error_${keys.ugsRevisionNumber}"></span>
+    <props:textProperty name="${keys.revisionNumber}" className="mediumField"/>
+    <span class="error" id="error_${keys.revisionNumber}"></span>
   </td>
 </tr>
 
