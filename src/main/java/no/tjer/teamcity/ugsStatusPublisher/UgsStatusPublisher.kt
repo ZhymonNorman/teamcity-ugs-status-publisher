@@ -58,6 +58,17 @@ internal class UgsStatusPublisher(
         return UgsConstants.ID
     }
 
+    fun getRevision(revisionInfo:BuildRevision): Int? {
+
+        if(myParams[UgsConstants.REV_NUM] != null){
+            return myParams[UgsConstants.REV_NUM]?.toInt(10)
+        }
+        else {
+            return revisionInfo.revision.toInt(10)
+        }
+
+    }
+
     override fun isPublishingForRevision(revision: BuildRevision): Boolean {
         return true
     }
@@ -104,8 +115,7 @@ internal class UgsStatusPublisher(
         val description = LogUtil.describe(build)
         val commitStatusUrl = MessageFormat.format(POST_BADGE_URL_FORMAT, myParams[UgsConstants.SERVER_URL])
         val body = JSONObject()
-        val revNumStr = myParams[UgsConstants.REV_NUM]
-        val revNum: Int? = revNumStr.toInt(10)
+        val revNum: Int? = getRevision(revision)
         // TODO: Try parse?
         
         // @ZhymonNorman - parameterize revision
